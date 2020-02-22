@@ -40,7 +40,6 @@ MineverseBruh.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 MineverseBruh.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 MineverseBruh.DisplayOrder = 99999
 MineverseBruh.ResetOnSpawn = false
-
 MainGUI.Name = "MainGUI"
 MainGUI.Parent = MineverseBruh
 MainGUI.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -49,14 +48,12 @@ MainGUI.ClipsDescendants = true
 MainGUI.ZIndex = 999
 MainGUI.Position = UDim2.new(0, 659, 0, 280)
 MainGUI.Size = UDim2.new(0, 284, 0, 303)
-
 topbar.Name = "topbar"
 topbar.Parent = MainGUI
 topbar.BackgroundColor3 = Color3.new(1, 1, 0.498039)
 topbar.BorderColor3 = Color3.new(0, 0.490196, 0.929412)
 topbar.BorderSizePixel = 0
 topbar.Size = UDim2.new(0, 284, 0, 14)
-
 close.Name = "close"
 close.Parent = topbar
 close.BackgroundColor3 = Color3.new(1, 1, 0.498039)
@@ -68,7 +65,6 @@ close.Text = "-"
 close.TextColor3 = Color3.new(0, 0, 0)
 close.TextSize = 14
 close.TextStrokeColor3 = Color3.new(1, 1, 1)
-
 littlebar.Name = "littlebar"
 littlebar.Parent = MainGUI
 littlebar.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -76,7 +72,6 @@ littlebar.BackgroundTransparency = 0.85000002384186
 littlebar.BorderSizePixel = 0
 littlebar.Position = UDim2.new(0.0176056344, 0, 0.243676543, 0)
 littlebar.Size = UDim2.new(0, 274, 0, 1)
-
 Title.Name = "Title"
 Title.Parent = MainGUI
 Title.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -89,7 +84,6 @@ Title.TextColor3 = Color3.new(1, 1, 1)
 Title.TextScaled = true
 Title.TextSize = 14
 Title.TextWrapped = true
-
 MainButton.Name = "MainButton"
 MainButton.Parent = MainGUI
 MainButton.BackgroundColor3 = Color3.new(0.176471, 0.184314, 0.219608)
@@ -102,14 +96,12 @@ MainButton.Text = "Main"
 MainButton.TextColor3 = Color3.new(1, 1, 1)
 MainButton.TextSize = 20
 MainButton.TextWrapped = true
-
 sidecolorframe.Name = "sidecolorframe"
 sidecolorframe.Parent = MainGUI
 sidecolorframe.BackgroundColor3 = Color3.new(1, 1, 1)
 sidecolorframe.BackgroundTransparency = 0.85000002384186
 sidecolorframe.Position = UDim2.new(0.309859157, 0, 0.0948616564, 0)
 sidecolorframe.Size = UDim2.new(0, 1, 0, 36)
-
 InfoButton.Name = "InfoButton"
 InfoButton.Parent = MainGUI
 InfoButton.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -122,7 +114,6 @@ InfoButton.Text = "Info"
 InfoButton.TextColor3 = Color3.new(1, 1, 1)
 InfoButton.TextSize = 20
 InfoButton.TextWrapped = true
-
 mainstuff.Name = "mainstuff"
 mainstuff.Parent = MainGUI
 mainstuff.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -130,21 +121,18 @@ mainstuff.BackgroundTransparency = 0.85000002384186
 mainstuff.BorderColor3 = Color3.new(1, 1, 1)
 mainstuff.Position = UDim2.new(0.0422535241, 0, 0.333855152, 0)
 mainstuff.Size = UDim2.new(0, 261, 0, 186)
-
 littletinybarbruh.Name = "littletinybarbruh"
 littletinybarbruh.Parent = mainstuff
 littletinybarbruh.BackgroundColor3 = Color3.new(1, 1, 0.498039)
 littletinybarbruh.BorderSizePixel = 0
 littletinybarbruh.Position = UDim2.new(0, 0, -0.00966125075, 0)
 littletinybarbruh.Size = UDim2.new(0, 261, 0, 1)
-
 Frame.Parent = littletinybarbruh
 Frame.BackgroundColor3 = Color3.new(1, 1, 1)
 Frame.BackgroundTransparency = 1
 Frame.Position = UDim2.new(0.0613026805, 0, 17, 0)
 Frame.Size = UDim2.new(0, 245, 0, 100)
 Frame.ZIndex = 3
-
 bright.Name = "bright"
 bright.Parent = Frame
 bright.BackgroundColor3 = Color3.new(0.121569, 0.129412, 0.141176)
@@ -156,7 +144,6 @@ bright.Text = ""
 bright.TextColor3 = Color3.new(1, 0, 0)
 bright.TextSize = 14
 bright.TextStrokeColor3 = Color3.new(1, 1, 1)
-
 b.Name = "b"
 b.Parent = bright
 b.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -169,7 +156,6 @@ b.Text = "Full Brightness"
 b.TextColor3 = Color3.new(1, 1, 1)
 b.TextSize = 14
 b.TextXAlignment = Enum.TextXAlignment.Left
-
 killaura.Name = "killaura"
 killaura.Parent = Frame
 killaura.BackgroundColor3 = Color3.new(0.121569, 0.129412, 0.141176)
@@ -180,7 +166,6 @@ killaura.Font = Enum.Font.SourceSans
 killaura.Text = ""
 killaura.TextColor3 = Color3.new(0, 0, 0)
 killaura.TextSize = 14
-
 ka.Name = "ka"
 ka.Parent = killaura
 ka.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -193,7 +178,6 @@ ka.Text = "Kill Aura"
 ka.TextColor3 = Color3.new(1, 1, 1)
 ka.TextSize = 14
 ka.TextXAlignment = Enum.TextXAlignment.Left
-
 noclip.Name = "noclip"
 noclip.Parent = Frame
 noclip.BackgroundColor3 = Color3.new(0.121569, 0.129412, 0.141176)
@@ -205,7 +189,6 @@ noclip.Text = ""
 noclip.TextColor3 = Color3.new(1, 0, 0)
 noclip.TextSize = 14
 noclip.TextStrokeColor3 = Color3.new(1, 1, 1)
-
 nc.Name = "nc"
 nc.Parent = noclip
 nc.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -218,7 +201,6 @@ nc.Text = "Noclip | Press \"G\""
 nc.TextColor3 = Color3.new(1, 1, 1)
 nc.TextSize = 14
 nc.TextXAlignment = Enum.TextXAlignment.Left
-
 nofall.Name = "nofall"
 nofall.Parent = Frame
 nofall.BackgroundColor3 = Color3.new(0.121569, 0.129412, 0.141176)
@@ -230,7 +212,6 @@ nofall.Text = ""
 nofall.TextColor3 = Color3.new(1, 0, 0)
 nofall.TextSize = 14
 nofall.TextStrokeColor3 = Color3.new(1, 1, 1)
-
 nf.Name = "nf"
 nf.Parent = nofall
 nf.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -243,7 +224,6 @@ nf.Text = "Remove Fall Damage"
 nf.TextColor3 = Color3.new(1, 1, 1)
 nf.TextSize = 14
 nf.TextXAlignment = Enum.TextXAlignment.Left
-
 speed.Name = "speed"
 speed.Parent = Frame
 speed.BackgroundColor3 = Color3.new(0.121569, 0.129412, 0.141176)
@@ -254,7 +234,6 @@ speed.Font = Enum.Font.SourceSans
 speed.Text = ""
 speed.TextColor3 = Color3.new(1, 0, 0)
 speed.TextSize = 14
-
 s.Name = "s"
 s.Parent = speed
 s.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -267,7 +246,6 @@ s.Text = "Speed | Press \"H\""
 s.TextColor3 = Color3.new(1, 1, 1)
 s.TextSize = 14
 s.TextXAlignment = Enum.TextXAlignment.Left
-
 xray.Name = "xray"
 xray.Parent = Frame
 xray.BackgroundColor3 = Color3.new(0.121569, 0.129412, 0.141176)
@@ -279,7 +257,6 @@ xray.Text = ""
 xray.TextColor3 = Color3.new(1, 0, 0)
 xray.TextSize = 14
 xray.TextStrokeColor3 = Color3.new(1, 1, 1)
-
 b_2.Name = "b"
 b_2.Parent = xray
 b_2.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -292,11 +269,9 @@ b_2.Text = "X-Ray | Turn Off/On To Refresh"
 b_2.TextColor3 = Color3.new(1, 1, 1)
 b_2.TextSize = 14
 b_2.TextXAlignment = Enum.TextXAlignment.Left
-
 UIListLayout.Parent = Frame
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout.Padding = UDim.new(0.100000001, 0)
-
 mainstuffbruh.Name = "mainstuffbruh"
 mainstuffbruh.Parent = mainstuff
 mainstuffbruh.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -308,7 +283,6 @@ mainstuffbruh.Font = Enum.Font.SourceSansBold
 mainstuffbruh.Text = "Main Stuff"
 mainstuffbruh.TextColor3 = Color3.new(1, 1, 1)
 mainstuffbruh.TextSize = 14
-
 infoframe.Name = "infoframe"
 infoframe.Parent = MainGUI
 infoframe.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -317,14 +291,12 @@ infoframe.BorderColor3 = Color3.new(1, 1, 1)
 infoframe.Position = UDim2.new(0.0422535241, 0, 0.333855152, 0)
 infoframe.Size = UDim2.new(0, 261, 0, 186)
 infoframe.Visible = false
-
 littletinybarbruh_2.Name = "littletinybarbruh"
 littletinybarbruh_2.Parent = infoframe
 littletinybarbruh_2.BackgroundColor3 = Color3.new(1, 1, 0.498039)
 littletinybarbruh_2.BorderSizePixel = 0
 littletinybarbruh_2.Position = UDim2.new(0, 0, -0.00966124982, 0)
 littletinybarbruh_2.Size = UDim2.new(0, 261, 0, 1)
-
 infoframetitle.Name = "infoframetitle"
 infoframetitle.Parent = infoframe
 infoframetitle.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -336,7 +308,6 @@ infoframetitle.Font = Enum.Font.SourceSansBold
 infoframetitle.Text = "Info"
 infoframetitle.TextColor3 = Color3.new(1, 1, 1)
 infoframetitle.TextSize = 14
-
 TextLabel.Parent = infoframe
 TextLabel.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
 TextLabel.BorderColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -346,7 +317,6 @@ TextLabel.Font = Enum.Font.SourceSansBold
 TextLabel.Text = "GUI Made By: Jmuse#3982"
 TextLabel.TextColor3 = Color3.new(1, 1, 1)
 TextLabel.TextSize = 14
-
 TextLabel_2.Parent = infoframe
 TextLabel_2.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
 TextLabel_2.BorderColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -356,13 +326,11 @@ TextLabel_2.Font = Enum.Font.SourceSansBold
 TextLabel_2.Text = "X-Ray Script By: Jas_n#0501"
 TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
 TextLabel_2.TextSize = 14
-
 OpenGUI.Name = "OpenGUI"
 OpenGUI.Parent = MineverseBruh
 OpenGUI.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
 OpenGUI.Position = UDim2.new(0.0174779855, 0, 0.932432413, 0)
 OpenGUI.Size = UDim2.new(0, 112, 0, 39)
-
 open.Name = "open"
 open.Parent = OpenGUI
 open.BackgroundColor3 = Color3.new(0.176471, 0.188235, 0.219608)
@@ -374,36 +342,27 @@ open.TextColor3 = Color3.new(1, 1, 1)
 open.TextSize = 25
 open.TextStrokeTransparency = 0
 -- Scripts
-
 MainGUI.Draggable = true
 MainGUI.Selectable = true
 MainGUI.Active = true
-
 infoframe.Visible = true
 mainstuff.Visible = true
-
 MainGUI.Visible = false
 OpenGUI.Visible = true
-
 mainstuff.Position = UDim2.new(0.042, 0,0.334, 0)
 infoframe.Position = UDim2.new(-1.042, 0,0.334, 0)
-
 GUIopen = false
 open.MouseButton1Click:Connect(function()
 	GUIopen = true
 	MainGUI.Visible = true
 	OpenGUI.Visible = false
 end)
-
 close.MouseButton1Click:Connect(function()
 	GUIopen = false
 	MainGUI.Visible = false
 	OpenGUI.Visible = true
 end)
-
-
 switchspeed = 0.4
-
 function cooldown()
 	if not switching then
 		switching = true
@@ -411,85 +370,59 @@ function cooldown()
 		switching = false
 	end
 end
-
 switching = false
 MainButton.MouseButton1Click:Connect(function() if not switching then
 	mainstuff:TweenPosition(UDim2.new(0.042, 0,0.334, 0),"Out","Quint",switchspeed)
 	infoframe:TweenPosition(UDim2.new(-1.042, 0,0.334, 0),"Out","Quint",switchspeed)
 	cooldown()
 end end)
-
 InfoButton.MouseButton1Click:Connect(function() if not switching then
 	mainstuff:TweenPosition(UDim2.new(-1.042, 0,0.334, 0),"Out","Quint",switchspeed)
 	infoframe:TweenPosition(UDim2.new(0.042, 0,0.334, 0),"Out","Quint",switchspeed)
 	cooldown()
 end end)
-
-
-
-
-
-
 function ESP()
 	surfaces = {"Front", "Back", "Top", "Bottom", "Left", "Right"}
-
-	for i,v in pairs (game.Workspace.Blocks:GetDescendants()) do 
-
-    if v.Name == "CoalOre" and v:IsA("Part") then 
-
+	for i,v in pairs (game.Workspace.Blocks:GetDescendants()) do
+    if v.Name == "CoalOre" and v:IsA("Part") then
         for i = 1, #surfaces do
-
             local sgui = Instance.new("SurfaceGui", v)
 			sgui.Name = "JmuseESP"
             sgui.AlwaysOnTop = true
             sgui.Face = surfaces[i]
-
             local frm = Instance.new("Frame", sgui)
             frm.Size = UDim2.new(1,0,1,0)
             frm.BackgroundColor3 = Color3.fromRGB(10,10,10)
-
+	frm.BackgroundTransparency = 0.25
         end
-
     end
 	
-	if v.Name == "DiamondOre" and v:IsA("Part") then 
-
+	if v.Name == "DiamondOre" and v:IsA("Part") then
         for i = 1, #surfaces do
-
             local sgui = Instance.new("SurfaceGui", v)
 			sgui.Name = "JmuseESP"
             sgui.AlwaysOnTop = true
             sgui.Face = surfaces[i]
-
             local frm = Instance.new("Frame", sgui)
             frm.Size = UDim2.new(1,0,1,0)
-            frm.BackgroundColor3 = Color3.fromRGB(0,255,255)
-
+            frm.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+				frm.BackgroundTransparency = 0.25
         end
-
     end
-
-if v.Name == "IronOre" and v:IsA("Part") then 
-
+if v.Name == "IronOre" and v:IsA("Part") then
         for i = 1, #surfaces do
-
             local sgui = Instance.new("SurfaceGui", v)
 			sgui.Name = "JmuseESP"
             sgui.AlwaysOnTop = true
             sgui.Face = surfaces[i]
-
             local frm = Instance.new("Frame", sgui)
             frm.Size = UDim2.new(1,0,1,0)
-            frm.BackgroundColor3 = Color3.fromRGB(255,255,255)
-
+            frm.BackgroundColor3 = Color3.fromRGB(255, 170, 127)
+				frm.BackgroundTransparency = 0.25
         end
-
     end
-
 	end
-
 end
-
 speedon = false
 game:GetService('RunService').Stepped:connect(function()
 	if speedon then
@@ -499,7 +432,6 @@ game:GetService('RunService').Stepped:connect(function()
 		game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
 	end
 end)
-
 local ms = game.Players.LocalPlayer:GetMouse()
 ms.KeyDown:Connect(function(key)
 	if key == "h" then
@@ -532,10 +464,6 @@ ms.KeyDown:Connect(function(key)
 		end
 	end
 end)
-
-
-
-
 brighton = false
 bright.MouseButton1Click:Connect(function()
 	if not brighton then brighton = true
@@ -545,8 +473,6 @@ bright.MouseButton1Click:Connect(function()
 		game.Lighting.FogEnd = 1000000
 	end
 end)
-
-
 killauraon = false
 killaura.MouseButton1Click:Connect(function()
 	if not killauraon then killauraon = true
@@ -561,8 +487,6 @@ end
 end
 	end
 end)
-
-
 noclipon = false
 noclip.MouseButton1Click:Connect(function()
 	if not noclipon then noclipon = true
@@ -571,8 +495,6 @@ noclip.MouseButton1Click:Connect(function()
 		noclip.BackgroundColor3 = Color3.fromRGB(31,33,36)
 	end
 end)
-
-
 nofallon = false
 nofall.MouseButton1Click:Connect(function()
 	if not nofallon then nofallon = true
@@ -580,8 +502,6 @@ nofall.MouseButton1Click:Connect(function()
 		game.ReplicatedStorage.GameRemotes.RequestDamage:Destroy()
 	end
 end)
-
-
 speedon = false
 speed.MouseButton1Click:Connect(function()
 	if not speedon then speedon = true
@@ -590,8 +510,6 @@ speed.MouseButton1Click:Connect(function()
 		speed.BackgroundColor3 = Color3.fromRGB(31,33,36)
 	end
 end)
-
-
 xrayon = false
 xray.MouseButton1Click:Connect(function()
 	if not xrayon then xrayon = true
@@ -614,5 +532,4 @@ xray.MouseButton1Click:Connect(function()
 		
 	end
 end)
-
 print("Bruh")
