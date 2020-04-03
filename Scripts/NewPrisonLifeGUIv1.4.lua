@@ -1546,3 +1546,9 @@ if key:lower() == "p" then
     end
 end
 end)
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Info:";
+    Text = "Press [P] To Open GUI!";
+    Duration = 10;
+})
