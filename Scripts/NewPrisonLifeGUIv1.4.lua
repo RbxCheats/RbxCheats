@@ -1225,7 +1225,7 @@ TextLabel_19.BackgroundTransparency = 1.000
 TextLabel_19.Position = UDim2.new(0, 0, -0.103825137, 0)
 TextLabel_19.Size = UDim2.new(0, 45, 0, 19)
 TextLabel_19.Font = Enum.Font.ArialBold
-TextLabel_19.Text = "Teams"
+TextLabel_19.Text = "Rage"
 TextLabel_19.TextColor3 = Color3.fromRGB(255, 185, 101)
 TextLabel_19.TextSize = 14.000
 
