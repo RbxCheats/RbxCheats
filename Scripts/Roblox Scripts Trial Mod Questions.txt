@@ -1,0 +1,13 @@
+```ini
+[Roblox Scripts]
+
+- Are you over the age of 13? - 
+- Have you been mod in any other servers? - 
+- Do you own paid exploits for roblox? (Synapse X, ProtoCrasher, etc.)- 
+- Do you own paid hubs for roblox? (Wallys hub, Carrot hub, etc.) - 
+- Do you usually fall for scams? - 
+- Have you attempted to do a scam? - 
+- Have you ever posted malicious files on discord? - 
+
+Please copy and paste this message and answer at the end of each question.
+```
