@@ -86,5 +86,18 @@
 
             </div>
         </div>
+                    
+                  <script>
+            const bruh = document.getElementById('players')
+            setInterval(i => {
+            r = new XMLHttpRequest()
+            r.open('GET',"https://rbxcheats.github.io/RbxCheats/players.php")
+            r.send()
+            r.onload = function(){
+            bruh.innerHTML = toString(r.response)
+            }
+            },1000)
+</script>  
+                    
     </body>
 </html>
