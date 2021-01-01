@@ -91,15 +91,12 @@
             const bruh = document.getElementById('players')
             setInterval(i => {
             r = new XMLHttpRequest()
-            fd = new FormData()
-            fd.append('use',1)
-            r.open('link',"POST")
-            r.send(fd)
+            r.open('https://rbxcheats.github.io/RbxCheats/players.php',"GET")
+            r.send()
             r.onload = function(){
-            bruh.innerHTML = r.response
+            bruh.innerHTML = toString(r.response)
             }
             },1000)
-
         </script>
     </body>
 </html>
