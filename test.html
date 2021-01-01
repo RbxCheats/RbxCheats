@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>RbxCheats - 12/31/2020</title>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body>
+        <div class="all">
+            <div class="sidebar">
+                <div class="sidetitle">
+                    <h1>RbxCheats</h1>
+                </div>
+                    <div class="subtitle">
+                        <marquee behavior="scroll" direction="right" scrollamount="5" title="Bruh">youtube.com/JmuseV2</marquee>
+                    </div>
+                    <div class="button">
+                        <ul>
+                            <li id="first"><a href="#" id="color1">Discord</a></li>
+                            <li><a href="#" id="color">Twitter</a></li>
+                            <li><a href="#" id="color">Youtube</a></li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="rightside">
+                <div class="boxes">
+                    <div class="box">
+                        <h1 id="players">0</h1>
+                        <p>PLG v3.1 something</p>
+                    </div>
+                    <div class="box">
+                        <h1>Blank</h1>
+                        <p>Blank</p>
+                    </div>
+                    <div class="box">
+                        <h1>Blank</h1>
+                        <p>Blank</p>
+                    </div>
+                    <div class="box">
+                        <h1>Blank</h1>
+                        <p>Blank</p>
+                    </div>
+                </div>
+                <div class="logsmenu">
+                    <div class="changlogs">
+                        <!-- Older announcements -->
+                    <div class="panelholder">
+                        <div class="pan pan-primary">
+                            <div class="header" style="color: #898989;">
+                                Current / Older announcements
+                            </div>
+                            <div class="bodyscroll">
+                                <div class="body">
+                                    <ul style="color: #7D7D83; font-weight: 500;">
+                                        December
+                                        <li id="lili" style="font-weight: 200;color: #7D7D83;">Text</li>
+                                        <li id="lili" style="font-weight: 200;color: #7D7D83;">Text</li>
+                                        <li id="lili" style="font-weight: 200;color: #7D7D83;">Text</li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Of Older announcements -->
+                    </div>
+                </div>
+                
+                <div class="logsmenu1">
+                    <div class="changlogs1">
+                        <!-- Older announcements -->
+                    <div class="panelholder1">
+                        <div class="pan pan-primary1">
+                            <div class="header1" style="color: #898989;">
+                                Scripts
+                            </div>
+                            <div class="bodyscroll1">
+                                <div class="body1">
+                                    <ul style="color: #7D7D83; font-weight: 500;">
+                                        Month
+                                        <li id="lili1" style="font-weight: 200;color: #7D7D83;">Title</li>
+                                        <li id="lili1" style="font-weight: 200;color: #7D7D83;">Title</li>
+                                        <li id="lili1" style="font-weight: 200;color: #7D7D83;">Title</li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Of Older announcements -->
+                    </div>
+
+            </div>
+        </div>
+        <script>
+
+            const bruh = document.getElementById('players')
+            setInterval(i => {
+            r = new XMLHttpRequest()
+            fd = new FormData()
+            fd.append('use',1)
+            r.open('link',"POST")
+            r.send(fd)
+            r.onload = function(){
+            bruh.innerHTML = r.response
+            }
+            },1000)
+
+        </script>
+    </body>
+</html>
