@@ -94,6 +94,7 @@
             r.open('GET',"https://rbxcheats.github.io/RbxCheats/players.php")
             r.send()
             r.onload = function(){
+                console.log(r.response)
             bruh.innerHTML = toString(r.response)
             }
             },1000)
