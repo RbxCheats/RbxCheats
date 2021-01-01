@@ -87,17 +87,18 @@
             </div>
         </div>
                     
-                  <script>
-            const bruh = document.getElementById('players')
-            setInterval(i => {
-            r = new XMLHttpRequest()
-            r.open('GET',"https://rbxcheats.github.io/RbxCheats/players.php")
-            r.send()
-            r.onload = function(){
-                console.log(r.response)
-            bruh.innerHTML = toString(r.response)
-            }
-            },1000)
+<script>
+    const bruh = document.getElementById('players')
+    setInterval(i => {
+    r = new XMLHttpRequest()
+    fd = new FormData()
+    fd.append('getusers',true)
+    r.open('link',"GET")
+    r.send(fd)
+    r.onload = function(){
+    bruh.innerHTML = toString(r.response)
+    }
+    },1000)            
 </script>  
                     
     </body>
