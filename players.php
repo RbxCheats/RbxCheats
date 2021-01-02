@@ -1,5 +1,5 @@
 <?php
-$amount = 0
+$amount = 0;
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET'){
   if ($_GET['user'] === 1) {
