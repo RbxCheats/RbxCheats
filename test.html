@@ -91,10 +91,8 @@
    const bruh = document.getElementById('players')
 setInterval(i => {
 r = new XMLHttpRequest()
-fd = new FormData()
-fd.append('getusers',1)
-r.open('POST',"https://rbxcheats.github.io/RbxCheats/players.php")
-r.send(fd)
+r.open('GET',"https://rbxcheats.github.io/RbxCheats/players.php?getusers=1")
+r.send()
 r.onload = function(){
 bruh.innerHTML = toString(r.response)
 }
