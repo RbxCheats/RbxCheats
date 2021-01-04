@@ -100,7 +100,16 @@ a {
     margin: 15px;
     color: #898989;
     background-color: #272b33!important;
-    width: 99999px;
+    width: 1500px;
+    border-radius: 10px;
+    padding: 1px 30px;
+}
+
+.box1 {
+    margin: 15px;
+    color: #898989;
+    background-color: #272b33!important;
+    width: 300px;
     border-radius: 10px;
     padding: 1px 30px;
 }
