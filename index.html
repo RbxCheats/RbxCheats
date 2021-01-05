@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>RbxCheats - 01/03/2021</title>
+        <title>RbxCheats - 01/04/2021</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -24,8 +24,8 @@
                 <div class="boxes">
                     <div class="box1">
                         <h1 id="troll">Loading...</h1>
-                        <script>
-                            try {
+                        <script>     
+                           try {
                               const amount = document.getElementById('troll')
                               r = new XMLHttpRequest()
                               r.open('GET','https://phpwebsitethingforsyn.000webhostapp.com/totaluses.php')
@@ -35,11 +35,29 @@
                             catch(e) {
                             console.log(e)
                             }
+                        
                         </script>
                         <p>Total PLG v0.8 uses</p>
                     </div>
+                    <div class="box1">
+                        <h1 id="troll2">Loading...</h1>
+                        <script>
+                            try {
+                              const things = document.getElementById('troll2')
+                              r2 = new XMLHttpRequest()
+                              r2.open('GET','https://phpwebsitethingforsyn.000webhostapp.com/totaluses31.php')
+                              r2.send()
+                              r2.onload = function(){things.innerHTML = r2.responseText.toString()}
+                            }
+                            catch(e2) {
+                            console.log(e2)
+                            }
+                        </script>
+                        <p>Total PLG v3.1 uses</p>
+                    </div>
                     <div class="box">
-                        <h1>Revamping some old GUIs might take a few days.</h1>
+                        <h1>All PLG scripts on the RbxCheats discord server
+                        </h1>
                         <p>LOL</p>
                     </div>
                 </div>     
