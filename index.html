@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>RbxCheats - 01/14/2021</title>
+        <title>RbxCheats</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="https://cdn.discordapp.com/icons/614675762271748116/edcd7f9820b685ad6ea9cedac05d6e50.webp?size=128" type="image/gif" sizes="50x50">
     </head>
@@ -24,13 +24,29 @@
             <div class="rightside">
                 <div class="boxes">
                     <div class="box">
-                        <h1>PLG v3.2 is in the works!!!
-                        </h1>
-                        <p>Join the discord for updates!!!</p>
+                        <h1 id="title">PLG v3.2 updates on discord!</h1>
+                        <p>Join the RbxCheats discord for updates</p>
+
+                        <script>
+
+r = new XMLHttpRequest()
+title = document.getElementById('title')
+r.open("GET","https://pastebin.com/raw/53NyBGkf")
+r.setRequestHeader('Content-Type','application/json')
+r.setRequestHeader('Origin','https://pastebin.com')
+r.send()
+r.onload = function(){
+    split = r.response.split('"')
+    //key = split[3]
+    tit = split[1]
+    title.innerHTML = tit
+}
+
+                        </script>
+
                     </div>
                 </div>     
             </div>
         </div>
-
     </body>
 </html>
