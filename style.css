@@ -117,3 +117,7 @@ a {
 .box p {
     font-weight: lighter;
 }
+
+iframe {
+    border-radius: 5px;
+}
