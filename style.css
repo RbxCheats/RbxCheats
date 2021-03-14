@@ -121,3 +121,9 @@ a {
 iframe {
     border-radius: 5px;
 }
+
+.loadstring {
+    width: auto;
+    color: white;
+    font-size: 17px;
+}
