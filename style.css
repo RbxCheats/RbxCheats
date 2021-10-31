@@ -9,7 +9,7 @@ body {
 p {
     margin: 35px;
     padding: 15px 20px;
-    background-color: #2d2d35;
+    background-color: #21222b;
     width: 500px;
     display: block;
     border-bottom: 5px solid #ef095f;   
@@ -38,7 +38,7 @@ p {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #25262F;
+    background-color: #21222b;
     color: white;
     text-align: center;
     padding: 15px;
@@ -50,7 +50,7 @@ p {
  }
 
  .opbox {
-     border: 3px solid #25262F;
+     border: 3px solid #2d2d35;
      border-radius: 5px;
      height: 600px;
      overflow-y: auto;
@@ -58,4 +58,14 @@ p {
 
 ::-webkit-scrollbar {
     width: 0px;
+  }
+
+  #yt:hover {
+    color: #FF6363;
+    transition-duration: 0.2s;
+  }
+
+  #dis:hover {
+    color: #6363FF;
+    transition-duration: 0.2s;
   }
