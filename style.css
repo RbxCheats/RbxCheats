@@ -15,10 +15,10 @@ body {
 
 #inner {
     border-radius: 10px;
-    border: rgb(255, 36, 96, 0.4) solid 1px;
+    border: rgb(255, 255, 255, 0.4) solid 1px;
     color: white;
     background-color: #1f2937;
-    width: 30%;
+    width: 40%;
     padding: 30px;
 }
 
@@ -43,6 +43,6 @@ footer {
   }
 
   a:hover {
-      color: rgb(255, 36, 96, 0.4);
+      color: rgb(255, 0, 255, 0.7);
       transition: 0.2s;
   }
