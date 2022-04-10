@@ -37,6 +37,7 @@ body {
     margin-top: 5%;
     display: flex;
     justify-content: center;
+    word-wrap: break-word;
 }
 
 #inner {
@@ -53,7 +54,7 @@ body {
     background-color: #181818;
     border-radius: 10px;
     padding: 10px;
-    display: flex;
+    display: block;
     overflow: hidden;
 }
 
