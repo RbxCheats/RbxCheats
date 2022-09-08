@@ -7788,3 +7788,34 @@ local spectateloop =
     end
 )
 coroutine.resume(spectateloop)
+
+-- Message bar message
+LP = game:GetService("Players").LocalPlayer
+
+hud = LP.PlayerGui.Home.hud
+MsgPX = hud.AddedGui.tooltip:Clone()
+MsgPX.TextLabel.Visible = true
+MsgPX.Visible = true
+MsgPX.Size = UDim2.new(0,445,0,34)
+MsgPX.Parent = hud
+MsgPX.Name = "MsgPX"
+
+function StaminaMsg(Args,t)
+	MsgPX.ImageLabel.ImageTransparency = 0.8
+	MsgPX.BackgroundTransparency = 0.2
+	MsgPX.TextLabel.TextTransparency = 0
+	for i = 1,string.len(Args) do
+		MsgPX.TextLabel.Text = string.sub(Args,1,i)
+		wait(0.03)
+	end
+	if t ~= nil then
+		wait(t)
+		for i = 1,33 do wait()
+			MsgPX.ImageLabel.ImageTransparency = 1/33*i+0.8
+			MsgPX.BackgroundTransparency = 1/33*i+0.2
+			MsgPX.TextLabel.TextTransparency = 1/33*i
+		end
+	end
+end
+
+StaminaMsg("This version will not work as intended, use the latest version of PLG", 7)
