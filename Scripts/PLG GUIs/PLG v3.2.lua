@@ -3573,8 +3573,6 @@ PLGv32.InfStamina.Text = ""
 PLGv32.InfStamina.TextColor3 = Color3.fromRGB(0, 0, 0)
 PLGv32.InfStamina.TextSize = 14.000
 
-
---[[
 game.Players.LocalPlayer.CharacterAdded:connect(
 	function()
 		wait(0.5)
@@ -3585,17 +3583,19 @@ game.Players.LocalPlayer.CharacterAdded:connect(
 )
 
 function InfPunch(Args)
-	for i, v in pairs(debug.getregistry()) do
-		if type(v) == "function" then
-			for i2, v2 in pairs(debug.getupvalues(v)) do
-				if i2 == 5 and typeof(v2) == "number" and tostring(v2) == string.split(v2, ".")[1] then
-					debug.setupvalue(v, i2, Args)
-				end
-			end
-		end
-	end
+	for i,v in next, getreg() do -- InfStamina Created 09.07.22
+    if type(v) == 'function' then
+        local t = debug.getupvalues(v) --a1
+        for i2,v2 in next, t do
+            if typeof(t[7]) == "function" and i2 == 4 and typeof(v2) == "number" then
+                debug.setupvalue(v,i2,Args)
+                --warn(v2,table.foreach(t,print))
+                --print("inf stamina success")
+            end
+        end
+    end
 end
-
+end
 stam = false
 PLGv32.InfStamina.MouseButton1Click:connect(function()
 
@@ -3612,7 +3612,7 @@ PLGv32.InfStamina.MouseButton1Click:connect(function()
 	end
 
 end)
-]]
+
 
 PLGv32.Frame_50.Parent = PLGv32.InfStamina
 PLGv32.Frame_50.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
@@ -3627,7 +3627,7 @@ PLGv32.TextLabel_52.Position = UDim2.new(0.146987438, 0, 0, 0)
 PLGv32.TextLabel_52.Size = UDim2.new(0, 137, 0, 20)
 PLGv32.TextLabel_52.Font = Enum.Font.Code
 PLGv32.TextLabel_52.Text = "Inf Stamina"
-PLGv32.TextLabel_52.TextColor3 = Color3.fromRGB(255, 0, 0)
+PLGv32.TextLabel_52.TextColor3 = Color3.fromRGB(77, 77, 77)
 PLGv32.TextLabel_52.TextSize = 14.000
 PLGv32.TextLabel_52.TextXAlignment = Enum.TextXAlignment.Left
 
