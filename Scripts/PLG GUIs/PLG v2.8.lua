@@ -1,18 +1,48 @@
+-- PLG v2.8 made by Jmuse <3
+-- Enjoy the un obf script you skids 
+-- https://rbxcheats.github.io/RbxCheats/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 local jmusepart
 for _,jmuseisasexyman in pairs (game.Workspace:GetDescendants()) do 
     if jmuseisasexyman:IsA("TextLabel") and jmuseisasexyman.Text == "OUT OF ORDER" then 
         jmusepart=jmuseisasexyman;
-		jmusepart.Text = "Furries Are Gross!"
+		jmusepart.Text = "!"
     end
 
 	if jmuseisasexyman:IsA("TextLabel") and jmuseisasexyman.Text == "(srsly this time)" then 
         jmusepart=jmuseisasexyman;
-		jmusepart.Text = "#KillFurries"
+		jmusepart.Text = "!"
     end
 
 	if jmuseisasexyman:IsA("TextLabel") and jmuseisasexyman.Text == "Bulletin Board" then 
         jmusepart=jmuseisasexyman;
-		jmusepart.Text = game.Players.LocalPlayer.Name.. " is cool!"
+		jmusepart.Text = "!"
     end
 
 	if jmuseisasexyman:IsA("TextLabel") and jmuseisasexyman.Text == "YARD" then 
@@ -22,12 +52,12 @@ for _,jmuseisasexyman in pairs (game.Workspace:GetDescendants()) do
 
 	if jmuseisasexyman:IsA("TextLabel") and jmuseisasexyman.Text == "ARMORY+" then 
         jmusepart=jmuseisasexyman;
-		jmusepart.Text = "Youtube: Jmuse"
+		jmusepart.Text = "!"
     end
 
 	if jmuseisasexyman:IsA("TextLabel") and jmuseisasexyman.Text == "###### #### ####?" then 
         jmusepart=jmuseisasexyman;
-		jmusepart.Text = "The world would be a better place if every furry killed themselves"
+		jmusepart.Text = "!"
     end
 
 	if jmuseisasexyman:IsA("TextLabel") and jmuseisasexyman.Text == "nope" then 
