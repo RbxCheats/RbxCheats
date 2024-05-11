@@ -1,35 +1,190 @@
-<html>
-    <head>
-        <title>Testing</title>
-    </head>
-    <body>
-        <span id="value"></span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark & Orange Theme</title>
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-<script>
-    function cb(response) {
-        document.getElementById('value').innerText = response.value;
-    }
-    </script>
-    <script async src="https://api.countapi.xyz/hit/rbxcheats.github.io/visits?callback=cb"></script>
-      </body>
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
 
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
 
-      <script>
+        nav a:hover {
+            background-color: #555;
+        }
 
-var getJSON = function(url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('get', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-      var status = xhr.status;
-      if (status == 200) {
-        callback(null, xhr.response);
-      } else {
-        callback(status);
-      }
-    };
-    xhr.send();
-};
+        .container {
+            max-width: 1200px;
+            margin: 90px auto 20px auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
 
-      </script>
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .pricing {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .pricing .plan {
+            background-color: #555;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 0 10px;
+            text-align: center;
+            flex-basis: 200px;
+        }
+
+        .pricing .plan h3 {
+            margin-top: 0;
+        }
+
+        .pricing .plan p {
+            margin-bottom: 0;
+        }
+
+        .payment {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .payment button {
+            background-color: #ccc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: not-allowed;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1 class="title">RbxCheats</h1>
+
+        <div class="card">
+            <h2>PLG v3.3 - The Ultimate Prison Life GUI</h2>
+            <p>
+                PLG v3.3 is not just another in-game GUI for Prison Life; it's the pinnacle of gaming innovation. Compatible with any third-party executor, PLG v3.3 offers unrivaled features and customization options to elevate your Roblox gaming experience like never before.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Monthly Pricing</h2>
+            <div class="pricing">
+                <div class="plan">
+                    <h3>Basic</h3>
+                    <p>
+                        $1.00/day
+                    </p>
+                </div>
+                <div class="plan">
+                    <h3>Premium</h3>
+                    <p>
+                        $20.00/month
+                    </p>
+                </div>
+                <div class="plan">
+                    <h3>Ultimate</h3>
+                    <p>
+                        $120/year
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Payment</h2>
+            <div class="payment">
+                <p>
+                    Payment option currently unavailable.
+                </p>
+                <button disabled>Make Payment</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Local: Access commonly used cheats and tools right at your fingertips, including fly, and noclip.</li>
+                <li>Rage: Dominate the game with powerful server-sided rage features, such as aimbot, and ESP.</li>
+                <li>Miscellaneous: Explore a plethora of miscellaneous features, from speed hacks to infinite jump.</li>
+                <li>Teleport: Instantly teleport to any location on the map with precision and ease.</li>
+                <li>Themes: Personalize your GUI with a variety of stylish themes to suit your mood and style.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Why PLG v3.3 Stands Out:</h2>
+            <p>
+                What sets PLG v3.3 apart from other Roblox GUIs is its unparalleled versatility and performance. With compatibility across all third-party executors, you have the freedom to choose the executor that best fits your needs while still enjoying the cutting-edge features of PLG v3.3. Additionally, our constant updates ensure that you're always ahead of the game, with new features and improvements rolled out regularly to keep your gaming experience fresh and exciting.
+            </p>
+        </div>
+    </div>
+
+</body>
 </html>
