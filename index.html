@@ -1,259 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://rbxcheats.github.io/RbxCheats/PLG.ico" type="image/x-icon">
-  <title>RbxCheats | 12.08.24</title>
-  <style>
-    /* General Styles */
-body {
-    background-color: #1a1a1a;
-    color: #f0f0f0;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 1200px; /* Center content and limit maximum width */
-  }
-  
-  /* Header */
-  header {
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  header h1 {
-    color: #ff6600;
-  }
-  
-  /* Product Details */
-  .product-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
-    align-items: flex-start;
-    justify-content: center; /* Center-align content */
-  }
-  
-  .product-images {
-    flex: 1 1 300px;
-    max-width: 300px; /* Limit image container width */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center; /* Center images horizontally */
-  }
-  
-  .product-images img {
-    width: 100%;
-    max-width: 250px; /* Set image size within the container */
-    border-radius: 8px;
-    border: 1px solid #333;
-  }
-  
-  .product-info {
-    flex: 2 1 500px;
-    max-width: 600px; /* Limit the width of the product information */
-  }
-  
-  .product-info h2 {
-    color: #ff6600;
-    font-size: 1.8rem;
-  }
-  
-  .short-description {
-    font-style: italic;
-    margin: 10px 0;
-  }
-  
-  .long-description {
-    margin: 20px 0;
-    line-height: 1.6;
-  }
-  
-  .features {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .features li {
-    background-color: #333;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px 0;
-  }
-  
-  footer p {
-    color: #777;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .product-details {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .product-images img {
-      max-width: 150px; /* Smaller images for mobile */
-    }
-  
-    .product-info {
-      text-align: center;
-    }
-  
-    .features li {
-      margin: 10px auto;
-      max-width: 300px;
-    }
-  }
-  
-/* Download Button */
-.download-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #777;
-    background-color: #333;
-    border: 1px solid #444;
-    border-radius: 5px;
-    cursor: not-allowed;
-    display: inline-block;
-  }
-  
-  .download-button:disabled {
-    opacity: 0.7;
-  }
-  
-  .download-button .lock-icon {
-    margin-left: 5px;
-  }
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://rbxcheats.github.io/RbxCheats/PLG.ico" type="image/x-icon">
+    <title>RbxCheats | 12.15.24</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  /* Reset and Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #1a0933;
+            color: #e0d6f7;
+        }
 
+        /* Navigation Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: #2a0d4d;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
 
-/* Navbar Styles */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ab81ff;
+        }
 
-.navbar .logo {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
+        .navbar-buttons {
+            display: flex;
+            gap: 1rem;
+        }
 
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
-}
+        .nav-button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: #6a11cb;
+            color: white;
+            opacity: 0.9;
+        }
 
-.navbar .nav-links li {
-  margin: 0 15px;
-}
+        .nav-button:hover {
+            opacity: 1;
+            background-color: #8e44ad;
+        }
 
-.navbar .nav-links a {
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
-  position: relative;
-  padding: 5px;
-  transition: all 0.3s ease-in-out;
-}
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, #1a0933 0%, #2a0d4d 100%);
+        }
 
-/* Hover Animation */
-.navbar .nav-links a:hover {
-  color: #ff6600;
-}
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ab81ff;
+            background: linear-gradient(to right, #ab81ff, #6a11cb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-.navbar .nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: #ff6600;
-  transition: width 0.3s ease-in-out;
-}
+        .hero-description {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: #d1c4e9;
+            line-height: 1.8;
+        }
 
-.navbar .nav-links a:hover::after {
-  width: 100%;
-}
-  </style>
+        .download-button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            background-color: #6a11cb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .download-button:hover {
+            background-color: #8e44ad;
+            transform: translateY(-3px);
+        }
+
+        /* Product Image */
+        .product-image {
+            max-width: 30%;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            filter: brightness(0.9);
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 3rem 5%;
+            flex-wrap: wrap;
+        }
+
+        .feature-card {
+            background-color: #2a0d4d;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            width: 300px;
+            border: 1px solid #6a11cb;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(106,17,203,0.3);
+            border-color: #ab81ff;
+        }
+
+        .feature-title {
+            margin-bottom: 1rem;
+            color: #ab81ff;
+        }
+
+        .feature-description {
+            color: #d1c4e9;
+        }
+
+        /* User Count */
+        .user-count {
+            text-align: center;
+            background-color: #2a0d4d;
+            padding: 3rem 5%;
+        }
+
+        .user-number {
+            font-size: 3rem;
+            color: #ab81ff;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .navbar-buttons {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature-card {
+                width: 90%;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">RbxCheats</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="https://youtube.com/JmuseV2">Youtube</a></li>
-      <li><a href="https://discord.gg/7J4J2TW7vr">Discord</a></li>
-    </ul>
-  </nav>
-  <div class="container">
-    <main>
-      <section class="product-details">
-        <div class="product-info">
-          <h2>PLG v3.3 | Currently In Beta</h2>
-          <p class="short-description">
-            With its cutting-edge technology and deep understanding of game dynamics, PLG represents the next generation of gaming 
-            assistance tools, empowering players to achieve new levels of performance and strategic mastery in Prison Life.
-          </p>
-          <p class="long-description">
-            PLG (Prison Life Guide) is an innovative advanced gameplay assistant designed to revolutionize the way 
-            players approach Prison Life. This comprehensive performance optimization tool provides 
-            players with a strategic edge by offering real-time analysis, tactical recommendations, and intelligent decision 
-            support systems that dramatically enhance overall gameplay efficiency.
-          </p>
-          <p class="long-description">
-            The efficiency booster aspect of PLG goes beyond simple game mechanics. It incorporates advanced algorithmic processing 
-            to evaluate multiple gameplay variables simultaneously, providing users with split-second insights that can mean the difference 
-            between success and failure in high-stakes prison scenarios. Whether you're planning an escape, managing resources, or navigating 
-            complex social interactions, PLG offers nuanced, data-driven guidance.
-          </p>
-          <ul class="features">
-            <li>Extra Sensory Perception (ESP): Allows players to see through walls, predict enemy movements.</li>
-            <li>Aim Assist: Automatically corrects player aim, making it easier to hit targets and reducing the skill gap between players.</li>
-            <li>Mass Kill: Inflicts massive damage to multiple players or objects simultaneously, disrupting gameplay and creating unfair advantages.</li>
-            <li>Kick Players: Allows players to forcibly remove others from the game.</li>
-            <li>Teleportation: Enables players to instantly travel across the map, bypassing obstacles and outmaneuvering opponents.</li>
-          </ul>
-          <button class="download-button" disabled>
-            Download PLG v3.3 <span class="lock-icon">🔒</span>
-          </button>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-brand">RbxCheats</div>
+        <div class="navbar-buttons">
+            <a href="https://www.youtube.com/@JmuseV2" class="nav-button" style="text-decoration: none;">Youtube</a>
+            <a href="https://discord.com/invite/7J4J2TW7vr" class="nav-button" style="text-decoration: none;">Discord</a>
         </div>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2024 RbxCheats. All Rights Reserved.</p>
-    </footer>
-  </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1 class="hero-title">PLG v3.3: Redefine</h1>
+        <p class="hero-description">Experience unprecedented efficiency and productivity with our cutting-edge software. Designed to streamline your workflows, automate repetitive tasks, and enhance your cognitive performance, our solution empowers you to achieve your goals faster and with greater ease. Ideal for professionals, students, and anyone seeking to optimize their daily routines.</p>
+        <button class="download-button">Download Latest</button>
+    </div>
+
+    <!-- Product Image -->
+    <img src="https://cdn.discordapp.com/attachments/1052383902393716858/1318000810898231357/image.png?ex=6760bb68&is=675f69e8&hm=00703d8747fe7780705402b87fb6331d0a3d19b8a705a2185d8f05258cf7f539&" alt="RbxCheats Dashboard" class="product-image">
+
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature-card">
+            <h3 class="feature-title">Always Up-to-Date</h3>
+            <p class="feature-description">Leveraging cutting-edge cloud technology, RbxCheats provides instant updates, ensuring you always have access to the latest features and performance improvements without manual intervention.</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="feature-title">Unparalleled Speed</h3>
+            <p class="feature-description">The fastest and most reliable software on the market, RbxCheats is engineered for lightning-quick performance. Our proprietary algorithms ensure maximum efficiency with minimal resource consumption.</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="feature-title">Revolutionary Features</h3>
+            <p class="feature-description">Introducing groundbreaking capabilities never seen before. From AI-driven task prioritization to predictive workflow optimization, RbxCheats pushes the boundaries of productivity technology.</p>
+        </div>
+    </div>
+
+    <!-- User Count -->
+    <div class="user-count">
+        <h2 class="user-number">10,000+</h2>
+        <p>Downloads Worldwide</p>
+    </div>
 </body>
 </html>
