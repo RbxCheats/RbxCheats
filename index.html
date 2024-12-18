@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="https://rbxcheats.github.io/RbxCheats/PLG.ico" type="image/x-icon">
-    <title>RbxCheats | 12.15.24</title>
+    <title>RbxCheats | 12.17.24</title>
     <style>
         * {
             margin: 0;
@@ -182,9 +181,72 @@
                 margin-bottom: 1rem;
             }
         }
+
+        .snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(255,255,255,0.7);
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
     </style>
 </head>
 <body>
+
+    <div class="snow-container" id="snow-container"></div>
+
+    <script>
+        function createSnowflake() {
+            const container = document.getElementById('snow-container');
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            
+            // Randomize snowflake properties
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.width = Math.random() * 5 + 5 + 'px';
+            snowflake.style.height = snowflake.style.width;
+            snowflake.style.opacity = Math.random();
+            
+            // Randomize fall speed and delay
+            const duration = Math.random() * 10 + 10;
+            snowflake.style.animationDuration = duration + 's';
+            snowflake.style.animationDelay = Math.random() * -duration + 's';
+
+            container.appendChild(snowflake);
+
+            // Remove snowflake after it falls
+            setTimeout(() => {
+                snowflake.remove();
+            }, (duration + 1) * 1000);
+        }
+
+        // Create multiple snowflakes
+        function startSnowfall() {
+            setInterval(createSnowflake, 200);
+        }
+
+        // Start snowfall when page loads
+        window.addEventListener('load', startSnowfall);
+    </script>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="navbar-brand">RbxCheats</div>
@@ -196,13 +258,13 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <h1 class="hero-title">PLG v3.3: Redefine</h1>
+        <h1 class="hero-title">Introducing: PLG v3.3</h1>
         <p class="hero-description">Experience unprecedented efficiency and productivity with our cutting-edge software. Designed to streamline your workflows, automate repetitive tasks, and enhance your cognitive performance, our solution empowers you to achieve your goals faster and with greater ease. Ideal for professionals, students, and anyone seeking to optimize their daily routines.</p>
         <button class="download-button">Download Latest</button>
     </div>
 
     <!-- Product Image -->
-    <img src="https://cdn.discordapp.com/attachments/1052383902393716858/1318000810898231357/image.png?ex=6760bb68&is=675f69e8&hm=00703d8747fe7780705402b87fb6331d0a3d19b8a705a2185d8f05258cf7f539&" alt="RbxCheats Dashboard" class="product-image">
+    <img src="https://raw.githubusercontent.com/RbxCheats/RbxCheats/refs/heads/master/plg.png" alt="RbxCheats Dashboard" class="product-image">
 
     <!-- Features Section -->
     <div class="features">
@@ -222,7 +284,7 @@
 
     <!-- User Count -->
     <div class="user-count">
-        <h2 class="user-number">10,000+</h2>
+        <h2 class="user-number">10,300+</h2>
         <p>Downloads Worldwide</p>
     </div>
 </body>
