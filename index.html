@@ -285,74 +285,8 @@
 
     <!-- User Count -->
     <div class="user-count">
-        <span id="viewCount" class="user-number">0</span>
-        <p>Loyal PLG Users</p>
-        
-
-        <script>
-            // Unique view counter implementation
-            class ViewCounter {
-                constructor() {
-                    this.storageKey = 'uniqueViewData';
-                    this.initializeCounter();
-                }
-    
-                initializeCounter() {
-                    // Generate or retrieve a unique visitor ID
-                    if (!this.getVisitorId()) {
-                        this.createVisitorId();
-                    }
-                }
-    
-                getVisitorId() {
-                    return localStorage.getItem('visitorId');
-                }
-    
-                createVisitorId() {
-                    // Create a unique ID using timestamp and random number
-                    const visitorId = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-                    localStorage.setItem('visitorId', visitorId);
-                }
-    
-                incrementViews() {
-                    const data = this.getViewData();
-                    const visitorId = this.getVisitorId();
-                    const currentDate = this.getTodayString();
-    
-                    // Check if this visitor has already been counted today
-                    if (!data.visitors[visitorId] || data.visitors[visitorId] !== currentDate) {
-                        data.totalViews++;
-                        data.visitors[visitorId] = currentDate;
-                        this.saveViewData(data);
-                    }
-    
-                    this.displayViewCount(data.totalViews);
-                }
-    
-                getViewData() {
-                    const storedData = localStorage.getItem(this.storageKey);
-                    return storedData 
-                        ? JSON.parse(storedData) 
-                        : { totalViews: 0, visitors: {} };
-                }
-    
-                saveViewData(data) {
-                    localStorage.setItem(this.storageKey, JSON.stringify(data));
-                }
-    
-                displayViewCount(count) {
-                    document.getElementById('viewCount').textContent = count;
-                }
-    
-                getTodayString() {
-                    return new Date().toISOString().split('T')[0];
-                }
-            }
-    
-            // Initialize and track view
-            const viewCounter = new ViewCounter();
-            viewCounter.incrementViews();
-        </script>
+        <h2 class="user-number">10,300+</h2>
+        <p>Downloads Worldwide</p>
     </div>
 </body>
 </html>
