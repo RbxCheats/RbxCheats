@@ -1,292 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RbxCheats | 12.17.24</title>
-    <link rel="shortcut icon" href="https://web.archive.org/web/20241215235941im_/https://rbxcheats.github.io/RbxCheats/PLG.ico" type="image/x-icon">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RbxCheats | 02.0.24</title>
+  <link rel="shortcut icon" href="https://web.archive.org/web/20241215235941im_/https://rbxcheats.github.io/RbxCheats/PLG.ico" type="image/x-icon">
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      color: #e0e0e0;
+      line-height: 1.6;
+      background-color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #1a0933;
-            color: #e0d6f7;
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        /* Navigation Styles */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            background-color: #2a0d4d;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-        }
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background-color: #2a2a2a;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
 
-        .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #ab81ff;
-        }
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #8E44AD;
+    }
 
-        .navbar-buttons {
-            display: flex;
-            gap: 1rem;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
 
-        .nav-button {
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background-color: #6a11cb;
-            color: white;
-            opacity: 0.9;
-        }
+    nav ul li a {
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
-        .nav-button:hover {
-            opacity: 1;
-            background-color: #8e44ad;
-        }
+    nav ul li a:hover {
+      color: #8E44AD;
+    }
 
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 4rem 5%;
-            background: linear-gradient(135deg, #1a0933 0%, #2a0d4d 100%);
-        }
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 10%;
+      background-image: url('https://raw.githubusercontent.com/RbxCheats/RbxCheats/refs/heads/master/image.png');
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+      flex: 1;
+    }
 
-        .hero-title {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #ab81ff;
-            background: linear-gradient(to right, #ab81ff, #6a11cb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
 
-        .hero-description {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            color: #d1c4e9;
-            line-height: 1.8;
-        }
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin-bottom: 40px;
+      color: #e0e0e0;
+    }
 
-        .download-button {
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            background-color: #6a11cb;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        }
+    .hero .download-btn {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background-color: #8E44AD;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
 
-        .download-button:hover {
-            background-color: #8e44ad;
-            transform: translateY(-3px);
-        }
+    .hero .download-btn:hover {
+      background-color: #8E44AD;
+    }
 
-        /* Product Image */
-        .product-image {
-            max-width: 30%;
-            height: auto;
-            display: block;
-            margin: 2rem auto;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-            filter: brightness(0.9);
-        }
+    /* About Section */
+    .about {
+      padding: 80px 10%;
+      background-color: #2a2a2a;
+      text-align: center;
+    }
 
-        /* Features Section */
-        .features {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            padding: 3rem 5%;
-            flex-wrap: wrap;
-        }
+    .about h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #8E44AD;
+    }
 
-        .feature-card {
-            background-color: #2a0d4d;
-            border-radius: 8px;
-            padding: 1.5rem;
-            text-align: center;
-            width: 300px;
-            border: 1px solid #6a11cb;
-            transition: all 0.3s ease;
-        }
+    .about .cards {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(106,17,203,0.3);
-            border-color: #ab81ff;
-        }
+    .about .card {
+      flex: 1;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
 
-        .feature-title {
-            margin-bottom: 1rem;
-            color: #ab81ff;
-        }
+    .about .card::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background: radial-gradient(circle, rgba(187, 134, 252, 0.2), transparent);
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.5s ease-out;
+      z-index: 0;
+    }
 
-        .feature-description {
-            color: #d1c4e9;
-        }
+    .about .card:hover::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
 
-        /* User Count */
-        .user-count {
-            text-align: center;
-            background-color: #2a0d4d;
-            padding: 3rem 5%;
-        }
+    .about .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(187, 134, 252, 0.4);
+      background-color: #242424;
+    }
 
-        .user-number {
-            font-size: 3rem;
-            color: #ab81ff;
-            margin-bottom: 0.5rem;
-        }
+    .about .card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #8E44AD;
+      position: relative;
+      z-index: 1;
+    }
 
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                padding: 1rem;
-            }
+    .about .card p {
+      font-size: 16px;
+      color: #e0e0e0;
+      position: relative;
+      z-index: 1;
+    }
 
-            .navbar-buttons {
-                margin-top: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+    /* Footer */
+    footer {
+      padding: 20px 10%;
+      background-color: #2a2a2a;
+      color: #e0e0e0;
+      text-align: center;
+      margin-top: auto;
+    }
 
-            .hero-title {
-                font-size: 2rem;
-            }
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
 
-            .features {
-                flex-direction: column;
-                align-items: center;
-            }
+    footer a {
+      color: #8E44AD;
+      text-decoration: underline;
+    }
 
-            .feature-card {
-                width: 90%;
-                margin-bottom: 1rem;
-            }
-        }
-
-        .snow-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-            z-index: 9999;
-            overflow: hidden;
-        }
-
-        .snowflake {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background: white;
-            border-radius: 50%;
-            box-shadow: 0 0 5px rgba(255,255,255,0.7);
-            animation: fall linear infinite;
-        }
-
-        @keyframes fall {
-            to {
-                transform: translateY(100vh) rotate(360deg);
-            }
-        }
-    </style>
+    footer a:hover {
+      color: #8E44AD;
+    }
+  </style>
 </head>
 <body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">RbxCheats</div>
+    <ul>
+      <li><a href="https://www.youtube.com/@JmuseV2">Youtube</a></li>
+      <li><a href="https://discord.com/invite/7J4J2TW7vr">Discord</a></li>
+    </ul>
+  </nav>
 
-    <div class="snow-container" id="snow-container"></div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to PLG v3.3</h1>
+    <p>Revolutionize your gameplay experience with the latest version of PLG. Faster, smarter, and more efficient than ever before.</p>
+    <button class="download-btn">Download Now</button>
+  </section>
 
-    <script>
-        function createSnowflake() {
-            const container = document.getElementById('snow-container');
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-            
-            // Randomize snowflake properties
-            snowflake.style.left = Math.random() * 100 + 'vw';
-            snowflake.style.width = Math.random() * 5 + 5 + 'px';
-            snowflake.style.height = snowflake.style.width;
-            snowflake.style.opacity = Math.random();
-            
-            // Randomize fall speed and delay
-            const duration = Math.random() * 10 + 10;
-            snowflake.style.animationDuration = duration + 's';
-            snowflake.style.animationDelay = Math.random() * -duration + 's';
-
-            container.appendChild(snowflake);
-
-            // Remove snowflake after it falls
-            setTimeout(() => {
-                snowflake.remove();
-            }, (duration + 1) * 1000);
-        }
-
-        // Create multiple snowflakes
-        function startSnowfall() {
-            setInterval(createSnowflake, 200);
-        }
-
-        // Start snowfall when page loads
-        window.addEventListener('load', startSnowfall);
-    </script>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-brand">RbxCheats</div>
-        <div class="navbar-buttons">
-            <a href="https://www.youtube.com/@JmuseV2" class="nav-button" style="text-decoration: none;">Youtube</a>
-            <a href="https://discord.com/invite/7J4J2TW7vr" class="nav-button" style="text-decoration: none;">Discord</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1 class="hero-title">Introducing: PLG v3.3</h1>
-        <p class="hero-description">Experience unprecedented efficiency and productivity with our cutting-edge software. Designed to streamline your workflows, automate repetitive tasks, and enhance your cognitive performance, our solution empowers you to achieve your goals faster and with greater ease. Ideal for professionals, students, and anyone seeking to optimize their daily routines.</p>
-        <button class="download-button">Download Latest</button>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="cards">
+      <div class="card">
+        <h3>What is PLG v3.3?</h3>
+        <p>PLG v3.3 is our latest software release for the popular roblox game "Prison Life", designed to enhance productivity with advanced features like AI-driven task prioritization and predictive workflow optimization.</p>
+      </div>
+      <div class="card">
+        <h3>Is RbxCheats safe to use?</h3>
+        <p>Absolutely! Security is our top priority, and we use cutting-edge technology to ensure your data remains safe and protected.</p>
+      </div>
+      <div class="card">
+        <h3>How do I get updates?</h3>
+        <p>All updates are automatic and free. Our cloud-based technology ensures you always have access to the latest features and improvements.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Product Image -->
-    <img src="https://raw.githubusercontent.com/RbxCheats/RbxCheats/refs/heads/master/plg.png" alt="RbxCheats Dashboard" class="product-image">
-
-    <!-- Features Section -->
-    <div class="features">
-        <div class="feature-card">
-            <h3 class="feature-title">Always Up-to-Date</h3>
-            <p class="feature-description">Leveraging cutting-edge cloud technology, RbxCheats provides instant updates, ensuring you always have access to the latest features and performance improvements without manual intervention.</p>
-        </div>
-        <div class="feature-card">
-            <h3 class="feature-title">Unparalleled Speed</h3>
-            <p class="feature-description">The fastest and most reliable software on the market, RbxCheats is engineered for lightning-quick performance. Our proprietary algorithms ensure maximum efficiency with minimal resource consumption.</p>
-        </div>
-        <div class="feature-card">
-            <h3 class="feature-title">Revolutionary Features</h3>
-            <p class="feature-description">Introducing groundbreaking capabilities never seen before. From AI-driven task prioritization to predictive workflow optimization, RbxCheats pushes the boundaries of productivity technology.</p>
-        </div>
-    </div>
-
-    <!-- User Count -->
-    <div class="user-count">
-        <h2 class="user-number">10,300+</h2>
-        <p>Downloads Worldwide</p>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 PLG v3.3. All rights reserved.</p>
+  </footer>
 </body>
 </html>
