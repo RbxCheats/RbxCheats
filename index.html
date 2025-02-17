@@ -1,232 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RbxCheats | 02.0.24</title>
-  <link rel="shortcut icon" href="https://web.archive.org/web/20241215235941im_/https://rbxcheats.github.io/RbxCheats/PLG.ico" type="image/x-icon">
-  <style>
-    /* General Styles */
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      color: #e0e0e0;
-      line-height: 1.6;
-      background-color: #1a1a1a;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RbxCheats | 02.17.25</title>
+    <link rel="shortcut icon" href="https://web.archive.org/web/20241215235941im_/https://rbxcheats.github.io/RbxCheats/PLG.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(26, 26, 26, 0.98);
+            padding: 20px 0;
+            text-align: center;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(173, 66, 245, 0.1);
+        }
 
-    /* Navbar */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 10%;
-      background-color: #2a2a2a;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
+        nav .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
 
-    nav .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #8E44AD;
-    }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
+        nav a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ad42f5, #ff69b4);
+            opacity: 0;
+            transform: translateY(100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+            border-radius: 8px;
+        }
 
-    nav ul li a {
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+        nav a:hover {
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(173, 66, 245, 0.3);
+        }
 
-    nav ul li a:hover {
-      color: #8E44AD;
-    }
+        nav a:hover::before {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    /* Hero Section */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 100px 10%;
-      background-image: url('https://raw.githubusercontent.com/RbxCheats/RbxCheats/refs/heads/master/image.png');
-      background-size: cover;
-      background-position: center;
-      color: #ffffff;
-      flex: 1;
-    }
+        nav a.active {
+            background: linear-gradient(45deg, #ad42f5, #ff69b4);
+            color: white;
+        }
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px);
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 60px;
+        }
 
-    .hero p {
-      font-size: 18px;
-      max-width: 600px;
-      margin-bottom: 40px;
-      color: #e0e0e0;
-    }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 560px;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-    .hero .download-btn {
-      padding: 12px 24px;
-      font-size: 16px;
-      font-weight: bold;
-      color: white;
-      background-color: #8E44AD;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
+        .video-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ad42f5, #ff69b4, #ad42f5);
+            z-index: -1;
+            border-radius: 14px;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-    .hero .download-btn:hover {
-      background-color: #8E44AD;
-    }
+        .video-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), 
+                                      rgba(173, 66, 245, 0.2) 0%,
+                                      transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
-    /* About Section */
-    .about {
-      padding: 80px 10%;
-      background-color: #2a2a2a;
-      text-align: center;
-    }
+        .video-wrapper:hover::after {
+            opacity: 1;
+        }
 
-    .about h2 {
-      font-size: 36px;
-      margin-bottom: 40px;
-      color: #8E44AD;
-    }
+        .video-wrapper:hover {
+            transform: scale(1.02) translateY(-8px);
+            box-shadow: 0 20px 40px rgba(173, 66, 245, 0.3),
+                       0 0 20px rgba(173, 66, 245, 0.2),
+                       0 0 0 2px rgba(173, 66, 245, 0.1);
+        }
 
-    .about .cards {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-    }
+        .video-wrapper:hover::before {
+            opacity: 1;
+            animation: borderRotate 4s linear infinite;
+        }
 
-    .about .card {
-      flex: 1;
-      padding: 20px;
-      background-color: #1a1a1a;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
+        .video {
+            width: 100%;
+            height: 315px;
+            border-radius: 10px;
+            border: none;
+            position: relative;
+            z-index: 1;
+            background-color: #1a1a1a;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-    .about .card::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 300%;
-      height: 300%;
-      background: radial-gradient(circle, rgba(187, 134, 252, 0.2), transparent);
-      transform: translate(-50%, -50%) scale(0);
-      transition: transform 0.5s ease-out;
-      z-index: 0;
-    }
+        @keyframes borderRotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
-    .about .card:hover::before {
-      transform: translate(-50%, -50%) scale(1);
-    }
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
 
-    .about .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 16px rgba(187, 134, 252, 0.4);
-      background-color: #242424;
-    }
+        @media (max-width: 768px) {
+            nav .nav-links {
+                flex-direction: column;
+                gap: 20px;
+            }
 
-    .about .card h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-      color: #8E44AD;
-      position: relative;
-      z-index: 1;
-    }
+            nav {
+                padding: 15px 0;
+            }
 
-    .about .card p {
-      font-size: 16px;
-      color: #e0e0e0;
-      position: relative;
-      z-index: 1;
-    }
+            .video-container {
+                flex-direction: column;
+                padding-top: 120px;
+                gap: 30px;
+            }
 
-    /* Footer */
-    footer {
-      padding: 20px 10%;
-      background-color: #2a2a2a;
-      color: #e0e0e0;
-      text-align: center;
-      margin-top: auto;
-    }
-
-    footer p {
-      margin: 0;
-      font-size: 14px;
-    }
-
-    footer a {
-      color: #8E44AD;
-      text-decoration: underline;
-    }
-
-    footer a:hover {
-      color: #8E44AD;
-    }
-  </style>
+            .video-wrapper {
+                max-width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">RbxCheats</div>
-    <ul>
-      <li><a href="https://www.youtube.com/@JmuseV2">Youtube</a></li>
-      <li><a href="https://discord.com/invite/7J4J2TW7vr">Discord</a></li>
-    </ul>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Introducing: PLG v3.3</h1>
-    <p>Revolutionize your gameplay experience with the latest version of PLG. Faster, smarter, and more efficient than ever before.</p>
-    <button class="download-btn">Download Now</button>
-  </section>
+    <!-- Modern Navbar -->
+    <nav>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="https://discord.com/invite/7J4J2TW7vr">Discord</a>
+            <a href="https://www.youtube.com/@JmuseV2">Youtube</a>
+        </div>
+    </nav>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="cards">
-      <div class="card">
-        <h3>What is PLG v3.3?</h3>
-        <p>PLG v3.3 is our latest software release for the popular roblox game "Prison Life", designed to enhance productivity with advanced features like AI-driven task prioritization and predictive workflow optimization.</p>
-      </div>
-      <div class="card">
-        <h3>Is RbxCheats safe to use?</h3>
-        <p>Absolutely! Security is our top priority, and we use cutting-edge technology to ensure your data remains safe and protected.</p>
-      </div>
-      <div class="card">
-        <h3>How do I get updates?</h3>
-        <p>All updates are automatic and free. Our cloud-based technology ensures you always have access to the latest features and improvements.</p>
-      </div>
+    <!-- Video Container with Enhanced Wrappers -->
+    <div class="video-container">
+        <div class="video-wrapper">
+            <iframe class="video" src="https://www.youtube.com/embed/38S4lB1F7Lk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+            <iframe class="video" src="https://www.youtube.com/embed/T2C5ydJ6834" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 RbxCheats. All rights reserved.</p>
-  </footer>
+    <!-- Particle System -->
+    <div class="particles" id="tsparticles"></div>
+
+    <!-- External JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script>
+        tsParticles.load("tsparticles", {
+            "particles": {
+                "number": {
+                    "value": 50,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "size": {
+                    "value": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1.5,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false
+                },
+                "links": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ad42f5",
+                    "opacity": 0.4,
+                    "width": 1
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                },
+                "modes": {
+                    "repulse": {
+                        "distance": 100,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            }
+        });
+
+        document.querySelectorAll('.video-wrapper').forEach(wrapper => {
+            wrapper.addEventListener('mousemove', (e) => {
+                const rect = wrapper.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                wrapper.style.setProperty('--x', `${x}%`);
+                wrapper.style.setProperty('--y', `${y}%`);
+            });
+        });
+    </script>
+
 </body>
 </html>
