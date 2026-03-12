@@ -5,453 +5,234 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RbxCheats</title>
     <link rel="shortcut icon" href="https://web.archive.org/web/20241215235941im_/https://rbxcheats.github.io/RbxCheats/PLG.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* CSS Styles */
         :root {
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --text-color: #f5f5f5;
-            --accent-color: #ff7b25;
-            --hover-color: #ff7b25;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            position: relative;
-            overflow-x: hidden;
-            background-image: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
-        }
-        
-        .background-glow {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(255, 123, 37, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: -1;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 500px;
-            text-align: center;
-            background-color: rgba(30, 30, 30, 0.8);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 123, 37, 0.2);
-            margin-top: 80px;
-        }
-        
-        .profile {
-            margin-bottom: 30px;
-            animation: fadeIn 1s ease-in-out;
-            position: relative;
-        }
-        
-        .profile-pic {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--accent-color);
-            margin-bottom: 15px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 0 20px rgba(255, 123, 37, 0.4);
-            margin-top: -80px;
-        }
-        
-        .profile-pic:hover {
-            transform: scale(1.05) rotate(5deg);
-            box-shadow: 0 0 30px rgba(255, 123, 37, 0.6);
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: var(--accent-color);
-            text-shadow: 0 2px 10px rgba(255, 123, 37, 0.3);
-            font-weight: 700;
-        }
-        
-        p {
-            opacity: 0.9;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-        
-        .social-links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .social-link {
-            background-color: var(--card-bg);
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 18px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-            border-left: 4px solid var(--accent-color);
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            font-size: 1.1rem;
-        }
-        
-        .social-link:hover {
-            transform: translateY(-5px);
-            background-color: var(--accent-color);
-            box-shadow: 0 8px 20px rgba(255, 123, 37, 0.4);
-            color: #121212;
-        }
-        
-        .social-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.5s;
-        }
-        
-        .social-link:hover::before {
-            left: 100%;
-        }
-        
-        .social-icon {
-            width: 28px;
-            height: 28px;
-            margin-right: 15px;
-            transition: filter 0.3s ease;
-            filter: brightness(0) saturate(100%) invert(65%) sepia(54%) saturate(2651%) hue-rotate(346deg) brightness(101%) contrast(102%);
+            --bg-color: #060606;
+            --card-bg: #0f0f0f;
+            --accent-color: #ff7b25; 
+            --glow-color: rgba(255, 123, 37, 0.4);
+            --text-main: #ffffff;
+            --text-dim: #999999;
         }
 
-        .social-link:hover .social-icon {
-            filter: brightness(0.1); /* Keep the hover state */
-        }
-        
-        footer {
-            margin-top: 40px;
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
-        
-        /* Music Player */
-        .music-player {
-            position: fixed;
-            bottom: 50px; /* Changed from 20px to 50px */
-            left: 50%;
-            transform: translateX(-50%);
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at center, #1a0d00 0%, #060606 80%);
+            color: var(--text-main);
             display: flex;
-            align-items: center;
-            background-color: rgba(30, 30, 30, 0.9);
-            padding: 15px 20px;
-            border-radius: 50px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            z-index: 100;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 123, 37, 0.3);
-            animation: fadeIn 1.5s ease-in-out;
-            width: auto;
-            max-width: 95%;
-        }
-        
-        .music-disc {
-            min-width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: repeating-radial-gradient(
-                circle at center,
-                var(--accent-color) 0,
-                var(--accent-color) 4px,
-                #2a2a2a 5px,
-                #2a2a2a 10px
-            );
-            position: relative;
-            margin-right: 15px;
-            animation: spin 4s linear infinite;
-            box-shadow: 0 0 10px rgba(255, 123, 37, 0.5);
-            animation-play-state: paused;
-        }
-        
-        .music-disc::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 12px;
-            height: 12px;
-            background-color: #121212;
-            border-radius: 50%;
-            border: 2px solid var(--accent-color);
-        }
-        
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-        
-        .music-info {
-            display: flex;
-            flex-direction: column;
-            margin-right: 15px;
-            min-width: 120px;
-            max-width: 200px;
-            overflow: hidden;
-        }
-        
-        .music-title {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--accent-color);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        
-        .music-title.scrolling {
-            animation: scrollText 15s linear infinite;
-            display: inline-block;
-            padding-left: 100%;
-            white-space: nowrap;
-        }
-        
-        @keyframes scrollText {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
-        
-        .music-artist {
-            font-size: 0.7rem;
-            opacity: 0.8;
-        }
-        
-        .music-controls-container {
-            display: flex;
-            align-items: center;
-        }
-        
-        .music-button {
-            background-color: var(--accent-color);
-            color: #121212;
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 18px;
-            transition: all 0.3s ease;
-            margin-right: 10px;
-        }
-        
-        .music-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px rgba(255, 123, 37, 0.5);
-        }
-        
-        .skip-button {
-            background-color: rgba(30, 30, 30, 0.9);
-            color: var(--accent-color);
-            border: 1px solid var(--accent-color);
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-            display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            margin-right: 10px;
+            min-height: 100vh;
+            padding: 50px 20px;
         }
-        
-        .skip-button:hover {
-            background-color: var(--accent-color);
-            color: #121212;
+
+        .main-wrapper { width: 100%; max-width: 1250px; text-align: center; }
+
+        .header h1 { 
+            font-size: 3.5rem; 
+            font-weight: 900; 
+            letter-spacing: 6px; 
+            margin-bottom: 5px; 
+            text-shadow: 0 0 25px var(--glow-color); 
         }
-        
-        .volume-control {
-            width: 80px;
-            height: 5px;
-            -webkit-appearance: none;
-            appearance: none;
-            background: linear-gradient(to right, var(--accent-color) 0%, var(--accent-color) 30%, #2a2a2a 30.1%, #2a2a2a 100%);
-            border-radius: 10px;
-            outline: none;
+
+        .header p { 
+            color: var(--text-dim); 
+            margin-bottom: 50px; 
+            font-size: 0.85rem; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
         }
-        
-        .volume-control::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 15px;
-            height: 15px;
-            background-color: var(--accent-color);
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+        .cards-wrapper { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 30px; 
+            justify-content: center; 
+            margin-bottom: 60px; 
         }
-        
-        .progress-container {
-            height: 4px;
-            background-color: #2a2a2a;
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
-            position: relative;
-            cursor: pointer;
+
+        .card {
+            background: var(--card-bg); 
+            border-radius: 12px; 
+            padding: 30px; 
+            border: 1px solid #1f1f1f;
+            width: 450px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8); 
+            transition: 0.3s;
         }
-        
-        .progress-bar {
-            height: 100%;
-            background-color: var(--accent-color);
-            border-radius: 10px;
-            width: 0%;
-            transition: width 0.1s linear;
+
+        .card:hover { border-color: var(--accent-color); transform: translateY(-5px); }
+
+        .card h2 { 
+            font-size: 1.4rem; 
+            margin-bottom: 10px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 10px; 
         }
-        
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        .card h2 i { color: var(--accent-color); }
+
+        .card .description { 
+            font-size: 0.9rem; 
+            color: var(--accent-color); 
+            font-weight: 700; 
+            margin-bottom: 20px; 
         }
-        
-        /* Particles */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
+
+        .loadstring-area {
+            background: #000; 
+            padding: 15px 20px; 
+            border-radius: 8px; 
+            display: flex;
+            align-items: center; 
+            justify-content: space-between; 
+            margin-bottom: 25px; 
+            border: 1px solid #1a1a1a;
+            min-height: 70px;
         }
-        
-        .particle {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background-color: var(--accent-color);
-            border-radius: 50%;
-            opacity: 0.5;
-            animation: float 15s infinite linear;
+
+        .loadstring-text { 
+            font-family: 'Consolas', monospace; 
+            font-size: 0.75rem; 
+            color: #d1d1d1; 
+            word-break: break-all; 
+            text-align: left;
+            margin-right: 15px;
+            line-height: 1.4;
         }
-        
-        @keyframes float {
-            0% {
-                transform: translateY(0) translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.5;
-            }
-            90% {
-                opacity: 0.5;
-            }
-            100% {
-                transform: translateY(-100vh) translateX(20px);
-                opacity: 0;
-            }
+
+        .copy-btn { 
+            background: #111; 
+            border: 1px solid #333; 
+            color: #fff; 
+            padding: 10px 14px; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            flex-shrink: 0;
         }
-        
-        /* Notification */
-        .notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: rgba(30, 30, 30, 0.9);
-            color: var(--text-color);
-            padding: 15px 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(5px);
-            border-left: 4px solid var(--accent-color);
-            z-index: 1000;
-            transform: translateX(120%);
-            transition: transform 0.3s ease;
-            max-width: 300px;
+
+        .copy-btn:hover { background: var(--accent-color); color: #000; }
+
+        .card-footer { 
+            display: flex; 
+            justify-content: center; 
+            font-size: 0.85rem; 
+            color: var(--text-dim); 
+            padding-top: 15px; 
+            border-top: 1px solid #1a1a1a; 
         }
-        
-        .notification.show {
-            transform: translateX(0);
+
+        .exec-val { 
+            color: var(--accent-color); 
+            font-weight: bold; 
+            margin-left: 5px;
+            text-shadow: 0 0 10px var(--glow-color);
         }
-        
-        .notification-title {
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: var(--accent-color);
-        }
+
+        .socials { display: flex; justify-content: center; gap: 30px; margin-top: 40px; }
+        .social-link { color: var(--text-dim); font-size: 1.8rem; transition: 0.2s; }
+        .social-link:hover { color: var(--accent-color); }
+
+        @media (max-width: 500px) { .header h1 { font-size: 2.2rem; } .card { width: 100%; } }
     </style>
 </head>
 <body>
-    <div class="background-glow"></div>
-    <div class="particles" id="particles"></div>
-    
-    <div class="notification" id="notification">
-        <div class="notification-title">Now Playing</div>
-        <div id="notification-text">Loading music...</div>
-    </div>
-    
-    <div class="container">
-        <div class="profile">
-            <img src="https://cdn.discordapp.com/avatars/521451594462658570/ad42f796a627996292bd46ce260cba28.webp?size=128" alt="Profile Picture" class="profile-pic">
-            <h1>@Jmuse</h1>
-            <p>Connect with me on social media</p>
+    <div class="main-wrapper">
+        <div class="header">
+            <h1>RBXCHEATS</h1>
+            <p>Scripts made by Jmuse</p>
         </div>
-        
-        <div class="social-links">
-            <a href="https://www.youtube.com/JmuseV2" class="social-link" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733646.png" alt="YouTube" class="social-icon">
-                YouTube
-            </a>
-            <a href="http://discord.com/invite/bYNDcz75Wt" class="social-link" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord" class="social-icon">
-                Discord
-            </a>
+
+        <div class="cards-wrapper">
+            <div class="card">
+                <h2><i class="fas fa-crosshairs"></i> Glare Aimbot & ESP</h2>
+                <p class="description">Aimbot [L] - ESP [P] - Tracers [O]</p>
+                <div class="loadstring-area">
+                    <span class="loadstring-text" id="load1">loadstring(game:HttpGet("https://raw.githubusercontent.com/RbxCheats/RbxCheats/refs/heads/master/Scripts/Glare%20Aimbot%20%26%20ESP.lua", true))()</span>
+                    <button class="copy-btn" onclick="handleCopy('load1', this, 'glare_script')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                </div>
+                <div class="card-footer">
+                    <span>Total Copies: <span class="exec-val" id="count_glare_script">0</span></span>
+                </div>
+            </div>
+
+<!-- Card 2 -->
+
+<div class="card">
+                <h2><i class="fas fa-crosshairs"></i> Prison life GUI</h2>
+                <p class="description">PLG v3.2 [PATCHED]</p>
+                <div class="loadstring-area">
+                    <span class="loadstring-text" id="load2">loadstring(game:HttpGet("https://raw.githubusercontent.com/RbxCheats/RbxCheats/refs/heads/master/Scripts/PLG%20GUIs/PLG%20v3.2.lua", true))()</span>
+                    <button class="copy-btn" onclick="handleCopy('load2', this, 'plg_script')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                </div>
+                <div class="card-footer">
+                    <span>Total Copies: <span class="exec-val" id="count_plg_script">0</span></span>
+                </div>
+            </div>
+
+
+            
         </div>
-        
-        <footer>
-            © 2025 RbxCheats | All Rights Reserved
-        </footer>
+
+        <div class="socials">
+            <a href="https://www.youtube.com/JmuseV2" class="social-link"><i class="fab fa-youtube"></i></a>
+            <a href="https://discord.com/invite/7J4J2TW7vr" class="social-link"><i class="fab fa-discord"></i></a>
+            <a href="https://github.com/RbxCheats" class="social-link"><i class="fab fa-github"></i></a>
+        </div>
     </div>
+
+   <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+
+    const _0x2b4e = [
+        "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x72\x62\x78\x73\x63\x72\x69\x70\x74\x73\x2d\x38\x37\x39\x33\x30\x2d\x64\x65\x66\x61\x75\x6c\x74\x2d\x72\x74\x64\x62\x2e\x66\x69\x72\x65\x62\x61\x73\x65\x69\x6f\x2e\x63\x6f\x6d\x2f", 
+        "\x41\x49\x7a\x61\x53\x79\x44\x4a\x30\x36\x48\x69\x7a\x73\x35\x59\x7a\x4c\x55\x7a\x53\x67\x49\x34\x45\x56\x42\x44\x56\x54\x30\x70\x31\x6f\x48\x67\x4f\x37\x41"  
+    ];
+
+    const firebaseConfig = {
+        apiKey: _0x2b4e[1],
+        authDomain: "rbxscripts-87930.firebaseapp.com",
+        projectId: "rbxscripts-87930",
+        databaseURL: _0x2b4e[0]
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+   
+    document.querySelectorAll('.exec-val').forEach(el => {
+        const key = el.id.replace('count_', '');
+        onValue(ref(db, 'counts/' + key), (snap) => {
+            el.innerText = (snap.val() || 0).toLocaleString();
+        });
+    });
+
+   
+    window.handleCopy = function(targetId, btn, scriptId) {
+        navigator.clipboard.writeText(document.getElementById(targetId).innerText).then(() => {
+            const originalIcon = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i>';
+            
+            runTransaction(ref(db, 'counts/' + scriptId), (current) => {
+                return (current || 0) + 1;
+            });
+
+            setTimeout(() => { btn.innerHTML = originalIcon; }, 2000);
+        });
+    }
+</script>
 </body>
 </html>
