@@ -1,280 +1,339 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RbxCheats</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RbxCheats — Maintenance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="shortcut icon" href="https://web.archive.org/web/20241215235941im_/https://rbxcheats.github.io/RbxCheats/PLG.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
-        :root {
-            --bg-color: #060606;
-            --card-bg: #0f0f0f;
-            --accent-color: #ff7b25; 
-            --glow-color: rgba(255, 123, 37, 0.4);
-            --text-main: #ffffff;
-            --text-dim: #999999;
-        }
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+      :root {
+        --bg: #0d0d0d;
+        --surface: #141414;
+        --surface-2: #1c1c1c;
+        --border: #252525;
+        --orange: #f97316;
+        --orange-glow: rgba(249, 115, 22, 0.15);
+        --orange-glow-sm: rgba(249, 115, 22, 0.07);
+        --text: #f0f0f0;
+        --text-muted: #888;
+        --text-dim: #444;
+      }
 
-        body {
-            background-color: var(--bg-color);
-            background-image: radial-gradient(circle at center, #1a0d00 0%, #060606 80%);
-            color: var(--text-main);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 50px 20px;
-        }
+      html, body {
+        height: 100%;
+      }
 
-        .main-wrapper { width: 100%; max-width: 1250px; text-align: center; }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+      }
 
-        .header h1 { 
-            font-size: 3.5rem; 
-            font-weight: 900; 
-            letter-spacing: 6px; 
-            margin-bottom: 5px; 
-            text-shadow: 0 0 25px var(--glow-color); 
-        }
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(var(--border) 1px, transparent 1px),
+          linear-gradient(90deg, var(--border) 1px, transparent 1px);
+        background-size: 48px 48px;
+        opacity: 0.35;
+        pointer-events: none;
+        z-index: 0;
+      }
 
-        .header p { 
-            color: var(--text-dim); 
-            margin-bottom: 50px; 
-            font-size: 0.85rem; 
-            text-transform: uppercase; 
-            letter-spacing: 3px; 
-        }
+      body::after {
+        content: '';
+        position: fixed;
+        top: -250px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, transparent 65%);
+        pointer-events: none;
+        z-index: 0;
+      }
 
-        .cards-wrapper { 
-            display: flex; 
-            flex-wrap: wrap; 
-            gap: 30px; 
-            justify-content: center; 
-            margin-bottom: 60px; 
-        }
+      .wrapper {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        gap: 1.75rem;
+      }
 
-        .card {
-            background: var(--card-bg); 
-            border-radius: 12px; 
-            padding: 30px; 
-            border: 1px solid #1f1f1f;
-            width: 450px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.8); 
-            transition: 0.3s;
-        }
+      .brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
 
-        .card:hover { border-color: var(--accent-color); transform: translateY(-5px); }
+      .logo-mark {
+        width: 72px;
+        height: 72px;
+        background: var(--surface-2);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-shadow: 0 0 0 1px var(--border), 0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.04);
+      }
 
-        .card h2 { 
-            font-size: 1.4rem; 
-            margin-bottom: 10px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            gap: 10px; 
-        }
+      .logo-mark svg {
+        width: 38px;
+        height: 38px;
+      }
 
-        .card h2 i { color: var(--accent-color); }
+      .logo-mark .pulse-dot {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 14px;
+        height: 14px;
+        background: var(--orange);
+        border-radius: 50%;
+        border: 2.5px solid var(--bg);
+        animation: pulseDot 2s ease-in-out infinite;
+      }
 
-        .card .description { 
-            font-size: 0.9rem; 
-            color: var(--accent-color); 
-            font-weight: 700; 
-            margin-bottom: 20px; 
-        }
+      @keyframes pulseDot {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(249,115,22,0.5); }
+        50% { box-shadow: 0 0 0 7px rgba(249,115,22,0); }
+      }
 
-        .loadstring-area {
-            background: #000; 
-            padding: 15px 20px; 
-            border-radius: 8px; 
-            display: flex;
-            align-items: center; 
-            justify-content: space-between; 
-            margin-bottom: 25px; 
-            border: 1px solid #1a1a1a;
-            min-height: 70px;
-        }
+      .brand-name {
+        font-size: 2.2rem;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        color: var(--text);
+        line-height: 1;
+      }
 
-        .loadstring-text { 
-            font-family: 'Consolas', monospace; 
-            font-size: 0.75rem; 
-            color: #d1d1d1; 
-            word-break: break-all; 
-            text-align: left;
-            margin-right: 15px;
-            line-height: 1.4;
-        }
+      .brand-name span {
+        color: var(--orange);
+      }
 
-        .copy-btn { 
-            background: #111; 
-            border: 1px solid #333; 
-            color: #fff; 
-            padding: 10px 14px; 
-            border-radius: 6px; 
-            cursor: pointer; 
-            flex-shrink: 0;
-        }
+      .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(249, 115, 22, 0.08);
+        border: 1px solid rgba(249, 115, 22, 0.22);
+        border-radius: 100px;
+        padding: 0.4rem 1rem;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--orange);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
 
-        .copy-btn:hover { background: var(--accent-color); color: #000; }
+      .status-badge .blink {
+        width: 7px;
+        height: 7px;
+        background: var(--orange);
+        border-radius: 50%;
+        animation: blink 1.4s ease-in-out infinite;
+        flex-shrink: 0;
+      }
 
-        .card-footer { 
-            display: flex; 
-            justify-content: center; 
-            font-size: 0.85rem; 
-            color: var(--text-dim); 
-            padding-top: 15px; 
-            border-top: 1px solid #1a1a1a; 
-        }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.15; }
+      }
 
-        .exec-val { 
-            color: var(--accent-color); 
-            font-weight: bold; 
-            margin-left: 5px;
-            text-shadow: 0 0 10px var(--glow-color);
-        }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 2.5rem 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        box-shadow: 0 4px 48px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.03);
+      }
 
-        .socials { display: flex; justify-content: center; gap: 30px; margin-top: 40px; }
-        .social-link { color: var(--text-dim); font-size: 1.8rem; transition: 0.2s; }
-        .social-link:hover { color: var(--accent-color); }
+      .card h1 {
+        font-size: 1.65rem;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        line-height: 1.25;
+        color: var(--text);
+      }
 
-        @media (max-width: 500px) { .header h1 { font-size: 2.2rem; } .card { width: 100%; } }
+      .card p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.75;
+        max-width: 440px;
+      }
+
+      .divider {
+        width: 100%;
+        height: 1px;
+        background: var(--border);
+      }
+
+      .links-label {
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+      }
+
+      .links {
+        display: flex;
+        gap: 0.65rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .link-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        background: var(--surface-2);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 0.7rem 1.1rem;
+        text-decoration: none;
+        color: var(--text-muted);
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: border-color 0.2s, color 0.2s, background 0.2s, transform 0.2s, box-shadow 0.2s;
+        flex: 1;
+        min-width: 130px;
+        justify-content: center;
+      }
+
+      .link-btn:hover {
+        border-color: var(--orange);
+        color: var(--text);
+        background: var(--orange-glow-sm);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 24px var(--orange-glow);
+      }
+
+      .link-btn svg {
+        width: 17px;
+        height: 17px;
+        flex-shrink: 0;
+        transition: color 0.2s;
+      }
+
+      .link-btn.youtube .icon { color: #ff4444; }
+      .link-btn.discord .icon { color: #5865f2; }
+      .link-btn.github .icon { color: #aaa; }
+
+      .link-btn:hover .icon {
+        color: var(--orange);
+      }
+
+      .footer {
+        font-size: 0.72rem;
+        color: var(--text-dim);
+        letter-spacing: 0.02em;
+      }
+
+      @media (max-width: 500px) {
+        .brand-name { font-size: 1.75rem; }
+        .card { padding: 2rem 1.25rem; }
+        .card h1 { font-size: 1.35rem; }
+        .links { flex-direction: column; }
+        .link-btn { min-width: unset; flex: unset; }
+      }
     </style>
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
 </head>
-<body>
-    <div class="main-wrapper">
-        <div class="header">
-            <h1>RBXCHEATS</h1>
-            <p>Scripts made by Jmuse</p>
+  <body>
+    <div class="wrapper">
+
+      <div class="brand">
+        <div class="logo-mark">
+          <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="13" height="13" rx="3" fill="#f97316"/>
+            <rect x="21" y="4" width="13" height="13" rx="3" fill="#f97316" opacity="0.45"/>
+            <rect x="4" y="21" width="13" height="13" rx="3" fill="#f97316" opacity="0.45"/>
+            <rect x="21" y="21" width="13" height="13" rx="3" fill="#f97316"/>
+          </svg>
+          <div class="pulse-dot"></div>
         </div>
+        <div class="brand-name">Rbx<span>Cheats</span></div>
+      </div>
 
-        <div class="cards-wrapper">
+      <div class="status-badge">
+        <span class="blink"></span>
+        Under Maintenance
+      </div>
 
+      <div class="card">
+        <h1>We'll be back shortly</h1>
+        <p>
+          RbxCheats is currently offline for scheduled maintenance and improvements.
+          We're working hard to bring you an even better experience.
+          Check back soon or follow our socials below for live updates.
+        </p>
 
+        <div class="divider"></div>
 
-<!-- Card 3-->
+        <span class="links-label">Stay connected</span>
 
-<div class="card">
-                <h2><i class="fas fa-crosshairs"></i> The Lost Front Script</h2>
-                <p class="description">Press "Insert" To Toggle</p>
-                <div class="loadstring-area">
-                    <span class="loadstring-text" id="load4">loadstring(game:HttpGet("https://raw.githubusercontent.com/RbxCheats/RbxCheats/refs/heads/master/Scripts/The%20Lost%20Front.lua", true))()</span>
-                    <button class="copy-btn" onclick="handleCopy('load4', this, 'tlf_script')">
-                        <i class="far fa-copy"></i>
-                    </button>
-                </div>
-                <div class="card-footer">
-                    <span>Total Copies: <span class="exec-val" id="count_tlf_script">0</span></span>
-                </div>
-            </div>
+        <div class="links">
+          <a href="https://www.youtube.com/JmuseV2" target="_blank" rel="noopener noreferrer" class="link-btn youtube">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            YouTube
+          </a>
 
-<!-- Card 1 -->
-            <div class="card">
-                <h2><i class="fas fa-crosshairs"></i> Bodycam Aimbot & ESP</h2>
-                <p class="description">"P" to toggle GUI</p>
-                <div class="loadstring-area">
-                    <span class="loadstring-text" id="load3">loadstring(game:HttpGet("https://raw.githubusercontent.com/RbxCheats/RbxCheats/refs/heads/master/Scripts/BodycamGUI.lua", true))()</span>
-                    <button class="copy-btn" onclick="handleCopy('load3', this, 'bc_script')">
-                        <i class="far fa-copy"></i>
-                    </button>
-                </div>
-                <div class="card-footer">
-                    <span>Total Copies: <span class="exec-val" id="count_bc_script">0</span></span>
-                </div>
-            </div>
+          <a href="https://discord.com/invite/7J4J2TW7vr" target="_blank" rel="noopener noreferrer" class="link-btn discord">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.001.022.015.043.03.055a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+            Discord
+          </a>
 
-<!-- Card 2 -->
-
-            <div class="card">
-                <h2><i class="fas fa-crosshairs"></i> Glare Aimbot & ESP</h2>
-                <p class="description">Aimbot [L] - ESP [P] - Tracers [O]</p>
-                <div class="loadstring-area">
-                    <span class="loadstring-text" id="load1">loadstring(game:HttpGet("https://raw.githubusercontent.com/RbxCheats/RbxCheats/refs/heads/master/Scripts/Glare%20Aimbot%20%26%20ESP.lua", true))()</span>
-                    <button class="copy-btn" onclick="handleCopy('load1', this, 'glare_script')">
-                        <i class="far fa-copy"></i>
-                    </button>
-                </div>
-                <div class="card-footer">
-                    <span>Total Copies: <span class="exec-val" id="count_glare_script">0</span></span>
-                </div>
-            </div>
-
-<!-- Card 3-->
-
-<div class="card">
-                <h2><i class="fas fa-crosshairs"></i> Prison life GUI</h2>
-                <p class="description">PLG v3.2 [PATCHED]</p>
-                <div class="loadstring-area">
-                    <span class="loadstring-text" id="load2">loadstring(game:HttpGet("https://raw.githubusercontent.com/RbxCheats/RbxCheats/refs/heads/master/Scripts/PLG%20GUIs/PLG%20v3.2.lua", true))()</span>
-                    <button class="copy-btn" onclick="handleCopy('load2', this, 'plg_script')">
-                        <i class="far fa-copy"></i>
-                    </button>
-                </div>
-                <div class="card-footer">
-                    <span>Total Copies: <span class="exec-val" id="count_plg_script">0</span></span>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-            
+          <a href="https://github.com/RbxCheats" target="_blank" rel="noopener noreferrer" class="link-btn github">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+            GitHub
+          </a>
         </div>
+      </div>
 
-        <div class="socials">
-            <a href="https://www.youtube.com/JmuseV2" class="social-link"><i class="fab fa-youtube"></i></a>
-            <a href="https://discord.com/invite/7J4J2TW7vr" class="social-link"><i class="fab fa-discord"></i></a>
-            <a href="https://github.com/RbxCheats" class="social-link"><i class="fab fa-github"></i></a>
-        </div>
+      <div class="footer">&copy; 2026 RbxCheats. All rights reserved.</div>
+
     </div>
-
-   <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-
-
-    const _0x2b4e = [
-        "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x72\x62\x78\x73\x63\x72\x69\x70\x74\x73\x2d\x38\x37\x39\x33\x30\x2d\x64\x65\x66\x61\x75\x6c\x74\x2d\x72\x74\x64\x62\x2e\x66\x69\x72\x65\x62\x61\x73\x65\x69\x6f\x2e\x63\x6f\x6d\x2f", 
-        "\x41\x49\x7a\x61\x53\x79\x44\x4a\x30\x36\x48\x69\x7a\x73\x35\x59\x7a\x4c\x55\x7a\x53\x67\x49\x34\x45\x56\x42\x44\x56\x54\x30\x70\x31\x6f\x48\x67\x4f\x37\x41"  
-    ];
-
-    const firebaseConfig = {
-        apiKey: _0x2b4e[1],
-        authDomain: "rbxscripts-87930.firebaseapp.com",
-        projectId: "rbxscripts-87930",
-        databaseURL: _0x2b4e[0]
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
-
-   
-    document.querySelectorAll('.exec-val').forEach(el => {
-        const key = el.id.replace('count_', '');
-        onValue(ref(db, 'counts/' + key), (snap) => {
-            el.innerText = (snap.val() || 0).toLocaleString();
-        });
-    });
-
-   
-    window.handleCopy = function(targetId, btn, scriptId) {
-        navigator.clipboard.writeText(document.getElementById(targetId).innerText).then(() => {
-            const originalIcon = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-check"></i>';
-            
-            runTransaction(ref(db, 'counts/' + scriptId), (current) => {
-                return (current || 0) + 1;
-            });
-
-            setTimeout(() => { btn.innerHTML = originalIcon; }, 2000);
-        });
-    }
-</script>
-</body>
+  </body>
 </html>
